@@ -1,0 +1,95 @@
+a:link{
+  color: #ffffff
+  text:decoration:none;
+}
+a:visited{
+  color: #ffffff
+}
+.menu {
+  float: right;
+  height:100px;
+  width: 111%;
+  display:inline;
+  margin-right:0px;
+  margin-top:-9px;
+  background-color:#0c141a;
+}
+.menu ol{
+  float:right;
+  margin-top:30px;
+  margin-right:50px;
+  list-style:none;
+}
+.menu ol li{
+  float:right;
+  font-size:20px;
+  margin-right: 20px;
+  display:block;
+}
+.menu ol li a{
+  display: block;
+  text-decoration: none;
+  padding: 5px 8px 0 10px;
+}
+#table {
+  float: left;
+  margin-left: 50px;
+	margin-top: 75px;
+}
+
+#img {
+	height: 300px;
+	width: 450px;
+	position: absolute;
+}
+#left_h {
+	height: 750px;
+	width: 100px;
+	position: absolute;
+	left : 0px;
+	top : 0px;
+}
+
+#right_h {
+	height: 750px;
+	width: 100px;
+	position: absolute;
+	right : 0px;
+	top : 0px;
+}
+.left {
+	visibility: hidden;
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	left : 0px;
+  top : 75%;
+}
+
+.right {
+	visibility: hidden;
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	top : 75%;
+	right : 0px;
+}
+#imgR {
+	height: 60px;
+	width: 60px;
+	position: absolute;
+	top : 75%;
+	right : 0px;
+}
+#imgL {
+	height: 60px;
+	width: 60px;
+	position: absolute;
+	top : 75%;
+	left : 0px;
+}
+.bilgi{
+  float: right;
+  margin-right: 250px;
+  margin-top: 25px;
+}

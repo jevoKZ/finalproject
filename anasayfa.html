@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Jevo'nun Zulası</title>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="menu">
+      <ol>
+        <li><a href="kayıtol.html">Kayıt Ol</a></li>
+        <li><a href="iletişim.html">İletişim</a></li>
+        <li><a href="ürünler.html">Ürünler</a></li>
+        <li><a href="">Ana Sayfa</a></li>
+      </ol>
+    </div>
+
+    <div class="kayit">
+       <form  action="login.php" autocomplete="on">
+          <h1>Giriş Yap</h1>
+          <p>
+               <label for="username" class="uname" data-icon="u" >Adınız:</label>
+               <input id="username" name="username" required="required" type="text" placeholder="Adınız"/>
+          </p>
+          <p>
+               <label for="password" class="youpasswd" data-icon="p">Parola:</label>
+               <input id="password" name="password" required="required" type="password" placeholder="Parola" />
+          </p>
+          <p class="keeplogin">
+               <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
+               <label for="loginkeeping">Beni Hatırla</label>
+          </p>
+          <p class="login button">
+               <input type="submit" value="Giriş Yap" />
+          </p>
+       </form>
+    </div>
+
+    <div class="bilgi">
+      <font face="Segoe Print">
+        <p>
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Cevdet Zübeyr BAĞCI & by Jevo<br>
+          <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Süleyman Demirel Üniversitesi Almaty/Kazakistan<br>
+          <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> +7 708 1001 678 <br>
+          <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> +90 5432 822 101<br>
+          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> cevdetbagci95@gmail.com<br>
+          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> cevdetzubeyr.bagci@gmail.com
+        </p>
+      </font><br/>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Jevo'nun Zulası</title>
+    <meta charset="utf-8">
+    <link href="kayıtol.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+
+<body style="background-color:#f5f5f5;" >
+  <div class="menu" style="margin-bot:50px">
+    <ol>
+      <li><a href="#">Kayıt Ol</a></li>
+      <li><a href="iletişim.html">İletişim</a></li>
+      <li><a href="ürünler.html">Ürünler</a></li>
+      <li><a href="anasayfa.html">Ana Sayfa</a></li>
+    </ol>
+  </div>
+   <center><p>Sitemize kayıt olarak güncel bir şekilde bilgi alabilir ve daha rahat bir şekilde bulunmuş olduğunuz
+     web sitesini kullanabilirsiniz. Üyelik yapmak veya kayıt olmak ücretsizdir. Siz değerli silah severler
+     site içerisinde gezerken aradığınız marka ve model bütün tabanca ve tüfek çeşitlerini bulabilir ve onlar
+     hakkında detaylı bilgi edinebilirsiniz. Önceliğimiz müşteri memnuniyeti olup eğer site içerisinde gezerken
+     bir hata yada istenmeyen bir durum ile karşılaşırsanız lütfen hakkındalar kısmını ziyaret ederek dilek ve
+     önerilerinizi bizim ile paylaşabilirsiniz. İyi günler dileriz.
+   </p></center>
+
+  <div class="register">
+    <form  action="register.php" autocomplete="on">
+     <p> <p>Adınız</p>
+           <label for="firstnamesignup" class="fname" data-icon="u"></label>
+           <input id="firstnamesignup" name="firstname" required="required" type="text" placeholder="" />
+      </p>
+      <p> <p>Soyadınız</p>
+           <label for="lastnamesignup" class="lname" data-icon="u"></label>
+           <input id="lastnamesignup" name="lastname" required="required" type="text" placeholder="" />
+      </p>
+      <p> <p>Kullanıcı Adı</p>
+           <label for="usernamesignup" class="uname" data-icon="u"></label>
+           <input id="usernamesignup" name="username" required="required" type="text" placeholder="" />
+      </p>
+      <p> <p>Parola</p>
+           <label for="passwordsignup" class="youpasswd" data-icon="p"></label>
+           <input id="passwordsignup" name="password" required="required" type="password" placeholder=""/>
+      </p>
+      <p> <p>Parolayı Onayla</p>
+           <label for="passwordsignup_confirm" class="password" data-icon="p"></label>
+           <input id="passwordsignup_confirm" name="passwordsignup" required="required" type="password" placeholder=""/>
+      </p>
+      <p> <p>Email</p>
+           <label for="emailsignup" class="youmail" data-icon="e" ></label>
+           <input id="emailsignup" name="email" required="required" type="email" placeholder="örnek@domain.com"/>
+      </p>
+      <p>
+           <p> Doğum Tarihi </p>
+           <select name="month" onChange="changeDate(this.options[selectedIndex].value);">
+           <option value="na">AY</option>
+           <option value="1">Ocak</option>
+           <option value="2">Şubat</option>
+           <option value="3">Mart</option>
+           <option value="4">Nisan</option>
+           <option value="5">Mayıs</option>
+           <option value="6">Haziran</option>
+           <option value="7">Temmuz</option>
+           <option value="8">Agustos</option>
+           <option value="9">Eylül</option>
+           <option value="10">Ekim</option>
+           <option value="11">Kasım</option>
+           <option value="12">Aralık</option>
+           </select>
+           <select name="day" id="day">
+           <option value="na">Gün</option>
+           <option value="1">1</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5</option>
+           <option value="6">6</option>
+           <option value="7">7</option>
+           <option value="8">8</option>
+           <option value="9">8</option>
+           <option value="10">9</option>
+           <option value="11">10</option>
+           <option value="12">11</option>
+           <option value="13">12</option>
+           <option value="14">13</option>
+           <option value="15">14</option>
+           <option value="16">15</option>
+           <option value="17">16</option>
+           <option value="18">17</option>
+           <option value="19">18</option>
+           <option value="20">19</option>
+           <option value="21">20</option>
+           <option value="22">21</option>
+           <option value="23">22</option>
+           <option value="24">23</option>
+           <option value="25">24</option>
+           <option value="26">25</option>
+           <option value="27">26</option>
+           <option value="28">27</option>
+           <option value="29">28</option>
+           <option value="30">29</option>
+           <option value="31">30</option>
+           <option value="32">31</option>
+           </select>
+           <select name="year" id="year">
+           <option value="na">Yıl</option>
+           </select>
+           <script language="JavaScript" type="text/javascript">
+           function changeDate(i){
+           var e = document.getElementById('day');
+           while(e.length>0)
+           e.remove(e.length-1);
+           var j=-1;
+           if(i=="na")
+           k=0;
+           else if(i==2)
+           k=28;
+           else if(i==4||i==6||i==9||i==11)
+           k=30;
+           else
+           k=31;
+           while(j++<k){
+           var s=document.createElement('option');
+           var e=document.getElementById('day');
+           if(j==0){
+           s.text="Day";
+           s.value="na";
+           try{
+           e.add(s,null);}
+           catch(ex){
+           e.add(s);}}
+           else{
+           s.text=j;
+           s.value=j;
+           try{
+           e.add(s,null);}
+           catch(ex){
+           e.add(s);}}}}
+           y = 2017;
+           while (y-->1908){
+           var s = document.createElement('option');
+           var e = document.getElementById('year');
+           s.text=y;
+           s.value=y;
+           try{
+           e.add(s,null);}
+           catch(ex){
+           e.add(s);}}
+           </script>
+      </p>
+      <p>
+           <p>Cinsiyet</p>
+           <select name="Gender">
+           <option value="male">Erkek</option>
+           <option value="female">Kız</option>
+           </select>
+      </p>
+      <p class="signin button">
+      <input type="submit" value="Kaydet"/>
+      </p>
+    </form>
+  </div>
+  <p id="aa">© 2016 ByJevo</p>
+
+
+</body>
+</html>
