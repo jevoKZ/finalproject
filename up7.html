@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Jevo'nun Zulası</title>
+    <meta charset="utf-8">
+    <link href="up.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="slider.css">
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <script type="text/javascript">
+      var a = 1;
+      var total = 3 ;
+      var interval = setInterval(slideA,3000);
+
+  function pause(){
+    clearInterval(interval);
+  }
+  function play(){
+    interval = setInterval(slideA,3000);
+  }
+
+  function slide(x){
+      var x = x
+      var image = document.getElementById('img');
+      a = a + x;
+      if(a > 3){ a = 1;}
+      if(a < 1){ a = 3;}
+
+      image.src="images/up7-resim/"+ a +".jpg"
+      }
+
+  function slideA(){
+      var image = document.getElementById('img');
+      a = a + 1;
+      if(a > 3){ a = 1;}
+      if(a < 1){ a = 3;}
+      image.src= "images/up7-resim/"+ a +".jpg"
+    }
+
+
+  function mOver(obj) {
+      var img_r = document.getElementById('imgrr');
+      img_r.style.visibility = 'visible';
+      var img_l = document.getElementById('imgll');
+      img_l.style.visibility = 'visible';
+
+  }
+
+  function mOut(obj) {
+      var img_r = document.getElementById('imgrr');
+      img_r.style.visibility = 'hidden';
+      var img_l = document.getElementById('imgll');
+      img_l.style.visibility = 'hidden';
+
+  }
+
+  </script>
+  <body >
+    <div class="menu">
+      <ol>
+        <li><a href="kayıtol.html">Kayıt Ol</a></li>
+        <li><a href="iletişim.html">İletişim</a></li>
+        <li><a href="ürünler.html">Ürünler</a></li>
+        <li><a href="anasayfa.html">Ana Sayfa</a></li>
+      </ol>
+    </div>
+
+      <div id='table'>
+          <img id="img" src="images/up7-resim/1.jpg">
+          <div id="right_h">
+              <div id="imgR" onmouseover="mOver(this)" onmouseout="mOut(this)">
+              <img  id="imgrr" onClick="slide(1)" class="right" src="right.ico">
+              </div>
+          </div>
+          <div id="left_h">
+              <div id="imgL" onmouseover="mOver(this)" onmouseout="mOut(this)">
+              <img id="imgll" onClick="slide(-1)" class="left" src="left.ico">
+              </div>
+          </div>
+      </div>
+
+    <div class="bilgi">
+      <center><h2>M204 ATP</h2></center>
+      <table class="table table-condensed">
+        <tr class="info" height="40 " width="100">
+          <td>Ürün Kodu</td>
+          <td>400088</td>
+        </tr>
+        <tr height="40 " width="100">
+          <td>Kalibre</td>
+          <td>12</td>
+        </tr>
+        <tr class="info" height="40 " width="100">
+          <td>Mekanizma</td>
+          <td>Pompalı</td>
+        </tr>
+        <tr height="40 " width="100">
+          <td>Kapasite</td>
+          <td>7 + 1</td>
+        </tr>
+        <tr class="info" height="40 " width="100">
+          <td>Atım Yatağı</td>
+          <td>76 mm</td>
+        </tr>
+        <tr height="40 " width="100">
+          <td>Namlu Boyu</td>
+          <td>47 mm</td>
+        </tr>
+        <tr class="info" height="40 " width="100">
+          <td>Toplam Uzunluk</td>
+          <td>100 mm</td>
+        </tr>
+        <tr height="40 " width="100">
+          <td>Toplam Yükseklik & Genişlik</td>
+          <td>20 cm - 5 cm</td>
+        </tr>
+        <tr class="info" height="40 " width="100">
+          <td>Ağırlık</td>
+          <td>2710 gr</td>
+        </tr>
+        <tr height="40 " width="100">
+          <td>Özellikler</td>
+          <td>Alüminyum Alaşımlı Lazer Markalamalı Kasa<br>Sentetik Tabanca Kabzeli Dipçik<br>
+            Alev Gizleyen<br>ATP® ( All Tactical Purpose )
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>

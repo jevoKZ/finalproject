@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Jevo'nun Zulası</title>
+    <meta charset="utf-8">
+    <link href="up.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="slider.css">
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <script type="text/javascript">
+      var a = 1;
+      var total = 6 ;
+      var interval = setInterval(slideA,3000);
+
+  function pause(){
+    clearInterval(interval);
+  }
+  function play(){
+    interval = setInterval(slideA,3000);
+  }
+
+  function slide(x){
+      var x = x
+      var image = document.getElementById('img');
+      a = a + x;
+      if(a > 6){ a = 1;}
+      if(a < 1){ a = 6;}
+
+      image.src="images/up5-resim/"+ a +".jpg"
+      }
+
+  function slideA(){
+      var image = document.getElementById('img');
+      a = a + 1;
+      if(a > 6){ a = 1;}
+      if(a < 1){ a = 6;}
+      image.src= "images/up5-resim/"+ a +".jpg"
+    }
+
+
+  function mOver(obj) {
+      var img_r = document.getElementById('imgrr');
+      img_r.style.visibility = 'visible';
+      var img_l = document.getElementById('imgll');
+      img_l.style.visibility = 'visible';
+
+  }
+
+  function mOut(obj) {
+      var img_r = document.getElementById('imgrr');
+      img_r.style.visibility = 'hidden';
+      var img_l = document.getElementById('imgll');
+      img_l.style.visibility = 'hidden';
+
+  }
+
+  </script>
+  <body >
+    <div class="menu">
+      <ol>
+        <li><a href="kayıtol.html">Kayıt Ol</a></li>
+        <li><a href="iletişim.html">İletişim</a></li>
+        <li><a href="ürünler.html">Ürünler</a></li>
+        <li><a href="anasayfa.html">Ana Sayfa</a></li>
+      </ol>
+    </div>
+
+      <div id='table'>
+          <img id="img" src="images/up5-resim/1.jpg">
+          <div id="right_h">
+              <div id="imgR" onmouseover="mOver(this)" onmouseout="mOut(this)">
+              <img  id="imgrr" onClick="slide(1)" class="right" src="right.ico">
+              </div>
+          </div>
+          <div id="left_h">
+              <div id="imgL" onmouseover="mOver(this)" onmouseout="mOut(this)">
+              <img id="imgll" onClick="slide(-1)" class="left" src="left.ico">
+              </div>
+          </div>
+      </div>
+
+    <div class="bilgi">
+      <center><h2>MEGA PASLANMAZ PARLAK</h2></center>
+      <table class="table table-condensed">
+        <tr class="info" height="40 " width="100">
+          <td>Ürün Kodu</td>
+          <td>400375</td>
+        </tr>
+        <tr height="40 " width="100">
+          <td>Kalibre</td>
+          <td>9x19 mm</td>
+        </tr>
+        <tr class="info" height="40 " width="100">
+          <td>Mekanizma</td>
+          <td>Çift Hareket</td>
+        </tr>
+        <tr height="40 " width="100">
+          <td>Kapasite</td>
+          <td>15 + 1</td>
+        </tr>
+        <tr class="info" height="40 " width="100">
+          <td>Namlu Boyu</td>
+          <td>116 mm</td>
+        </tr>
+        <tr height="40 " width="100">
+          <td>Toplam Uzunluk</td>
+          <td>204 mm</td>
+        </tr>
+        <tr class="info" height="40 " width="100">
+          <td>Toplam Yükseklik/Genişlik</td>
+          <td>140 mm - 35mm</td>
+        </tr>
+        <tr height="40 " width="100">
+          <td>Ağırlık (boş şarjörlü)</td>
+          <td>1010 gr</td>
+        </tr>
+        <tr class="info" height="40 " width="100">
+          <td>Tetik Kuvveti</td>
+          <td>4.5 kg ±1.5 kg (Çift Hareket)</td>
+        </tr>
+        <tr height="40 " width="100">
+          <td>Gövde Malzeme & Kaplama</td>
+          <td>Paslanmaz Dövme Çelik - Parlak Paslanmaz İşlemeli</td>
+        </tr>
+        <tr class="info" height="40 " width="100">
+          <td>Kapak Malzeme & Kaplama</td>
+          <td>Paslanmaz Dövme Çelik - Parlak Paslanmaz İşlemeli</td>
+        </tr>
+        <tr height="40 " width="100">
+          <td>Namlu Malzeme & Kaplama</td>
+          <td>Paslanmaz Dövme Çelik - Parlak Paslanmaz Çelik</td>
+        </tr>
+        <tr class="info" height="40 " width="100">
+          <td>Emniyet</td>
+          <td>1-Emniyet Mandalı<br>2-İğne Emniyeti</td>
+        </tr>
+        <tr height="40 " width="100">
+          <td>Özellikler</td>
+          <td>Değişebilir Arpacık<br>Kırlangıç Geçme Gez</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>
